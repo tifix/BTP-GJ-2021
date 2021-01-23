@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : Damagable
+public class PlayerHealth : Damageable
 {
     [Header("out of combat, passive healing parameters")]
     public bool out_of_combat = false;

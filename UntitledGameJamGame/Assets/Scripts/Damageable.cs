@@ -7,7 +7,7 @@ using UnityEngine;
  * 
  */
 
-public class Damagable : MonoBehaviour
+public class Damageable : MonoBehaviour
 {
     public float HP;
     public float max_HP;
