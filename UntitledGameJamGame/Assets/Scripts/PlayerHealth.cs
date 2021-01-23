@@ -34,6 +34,9 @@ public class PlayerHealth : Damageable
         //Stop healing and reset the out of combat timer
         out_of_combat = false;
 
+        //Shake the camera
+        CamEffects.instance.CameraShake();
+
         StopAllCoroutines();
         StartCoroutine(OutOfCombatTimer());
     }
