@@ -13,6 +13,9 @@ public class PlayerHealth : Damageable
     [Header("current timer until out-of-combat healing starts")]
     public float time_remaining;
 
+    public GameObject hit_effect;
+
+
     public void Update()
     {
         //Debug utility - asterisk to take damage
@@ -23,6 +26,10 @@ public class PlayerHealth : Damageable
     public override void TakeDamage(float damage)
     {
         base.TakeDamage(damage);
+
+        //Show hit particles
+        GameObject hit_splash = Instantiate(hit_effect, transform);
+        Destroy(hit_splash, 1);
 
         //Stop healing and reset the out of combat timer
         out_of_combat = false;

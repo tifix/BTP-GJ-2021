@@ -136,6 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 5
   max_HP: 5
+  hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
   contact_damage: 4
   knockback_amount: 3.5
   damage_props: 1

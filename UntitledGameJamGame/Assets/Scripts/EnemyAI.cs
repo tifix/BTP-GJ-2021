@@ -12,6 +12,9 @@ using UnityEngine;
 
 public class EnemyAI : Damageable
 {
+
+    public GameObject hit_effect;
+
     public float contact_damage = 1;
     public float knockback_amount = 1;
     [Tooltip("does the enemy deal damage to destructible objects?")]
@@ -21,7 +24,7 @@ public class EnemyAI : Damageable
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.TryGetComponent<Damageable>(out Damageable target))
+        if (collision.gameObject.TryGetComponent<Damageable>(out Damageable target))
         {
             //if coming in contact with other enemies
             if (target is EnemyAI && damage_friendly == false) return;
@@ -47,4 +50,13 @@ public class EnemyAI : Damageable
 
     }
 
+    public override void TakeDamage(float damage)
+    {
+        base.TakeDamage(damage);
+
+        //Show hit particles
+        GameObject hit_splash = Instantiate(hit_effect, transform);
+        Destroy(hit_splash, 1);
+
+    }
 }
