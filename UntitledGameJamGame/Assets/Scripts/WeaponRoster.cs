@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WeaponRoster : MonoBehaviour
 {
-    public List<MeleeWeapon> meleeWeapons; //List of meleeWeapons that the user has
-    public MeleeWeapon meleeWeapon; //Melee weapon that the user is currently using
+    public List<MeleeWeapon> meleeWeapons = new List<MeleeWeapon>(); //List of meleeWeapons that the user has
+    public MeleeWeapon meleeWeapon = new MeleeWeapon(); //Melee weapon that the user is currently using
 
     //public List<RangedWeapon> rangedWeapons;    
 }

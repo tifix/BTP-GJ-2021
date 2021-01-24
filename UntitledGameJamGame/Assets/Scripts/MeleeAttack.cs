@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
-{
-    private MeleeWeapon weapon;
+{    
     public Collider2D attackBox;
 
     public float minDuration, maxDuration;
@@ -15,7 +14,7 @@ public class MeleeAttack : MonoBehaviour
     void Start()
     {
         attackBox = new Collider2D();        
-        Destroy(this, maxDuration);
+        //Destroy(this, maxDuration);
     }
 
     private void OnCollisionEnter2D(Collision2D col)

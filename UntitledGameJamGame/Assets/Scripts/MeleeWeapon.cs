@@ -5,14 +5,20 @@ using UnityEngine;
 public class MeleeWeapon : MonoBehaviour
 {    
     public List<MeleeAttack> attacks;
-    public MeleeAttack currentAttack;
-    public MeleeAttack previousAttack;
+    public MeleeAttack currentAttack;/* = new MeleeAttack();*/
+    public MeleeAttack previousAttack = new MeleeAttack();
     public int attackIndex;
 
     public void Swing()
     {
-        previousAttack = currentAttack;
-        currentAttack = new MeleeAttack();
-        currentAttack = attacks[attackIndex];
+        //Debug.Log("Hello");
+        //previousAttack = currentAttack;
+        //currentAttack = new MeleeAttack();
+        //currentAttack = attacks[attackIndex];
+
+        currentAttack = Instantiate(attacks[0]);
+
+        Debug.Log(currentAttack);
+
     }
 }

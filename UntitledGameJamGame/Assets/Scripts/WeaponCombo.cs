@@ -14,6 +14,8 @@ public class WeaponCombo : MonoBehaviour
 
     public int ComboProcessing()
     {
+        
+
         if (p.timeSinceLastAttack >= p.roster.meleeWeapon.attacks[p.roster.meleeWeapon.attackIndex].minTimingInterval
                     && p.timeSinceLastAttack <= p.roster.meleeWeapon.attacks[p.roster.meleeWeapon.attackIndex].maxTimingInterval) //if the time since last attack is between the timing interval
         {
