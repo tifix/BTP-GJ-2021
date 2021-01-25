@@ -11,13 +11,21 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Dash))]
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("component references")]
-    public Rigidbody2D RB;
 
-    public float move_speed=2;
+    private float move_speed=400;
+
+    private Dash dash;
+    private Rigidbody2D RB;
+
+    private void Awake()
+    {
+        RB = GetComponent<Rigidbody2D>();
+        dash = GetComponent<Dash>();
+    }
 
     void Update()
     {
@@ -40,6 +48,10 @@ public class PlayerMovement : MonoBehaviour
         //applying movement
         RB.AddForce(Vector2.right * hor);
         RB.AddForce(Vector2.up * ver);
+
+        if (Input.GetMouseButtonDown(1)) StartCoroutine(dash.Woooosh(Camera.main.ScreenToWorldPoint(Input.mousePosition), true));
     }
+
+
 
 }

@@ -27,7 +27,6 @@ public class FollowPlayer : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(check_interval);
-            if (Vector2.Distance(player.transform.position, transform.position) > 50) yield return new WaitForSeconds(1);   //Refreshes less often if the plaeyr is far away.
             CheckIfPlayerIsNearby();
         }
     }
@@ -43,8 +42,8 @@ public class FollowPlayer : MonoBehaviour
                 if (player == null) //if player is just spotted, update agent destination
                 {
                     player = entity.transform;
-                    UpdateDestination(); 
-                } 
+                }
+                UpdateDestination();
                 return;
             }
             

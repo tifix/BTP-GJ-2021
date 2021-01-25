@@ -51527,6 +51527,10 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6150030210208391369, guid: 54582bef9ddd1884e8de0e91eaa38ee0, type: 3}
+      propertyPath: dash_distance
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6150030210208391370, guid: 54582bef9ddd1884e8de0e91eaa38ee0, type: 3}
       propertyPath: hit_effect
       value: 
@@ -51580,6 +51584,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 20
   max_HP: 20
+--- !u!114 &1615802190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615802187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78c0f6f5a2c4fe64da050554d6f5f0a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1674012189
 GameObject:
   m_ObjectHideFlags: 0
