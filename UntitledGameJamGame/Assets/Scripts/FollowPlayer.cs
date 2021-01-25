@@ -42,8 +42,8 @@ public class FollowPlayer : MonoBehaviour
                 if (player == null) //if player is just spotted, update agent destination
                 {
                     player = entity.transform;
-                    UpdateDestination(); 
-                } 
+                }
+                UpdateDestination();
                 return;
             }
             
