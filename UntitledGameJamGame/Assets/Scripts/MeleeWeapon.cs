@@ -1,24 +1,52 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeWeapon : MonoBehaviour
 {    
-    public List<MeleeAttack> attacks;
-    public MeleeAttack currentAttack;/* = new MeleeAttack();*/
-    public MeleeAttack previousAttack = new MeleeAttack();
-    public int attackIndex;
+    public List<MeleeAttack> attacks = new List<MeleeAttack>();
+    public GameObject currentAttack;
+    public MeleeAttack previousAttackInfo = new MeleeAttack();
+    public int attackIndex = 0;
+
+    public void Start()
+    {
+        currentAttack = null;
+    }
 
     public void Swing()
     {
-        //Debug.Log("Hello");
-        //previousAttack = currentAttack;
-        //currentAttack = new MeleeAttack();
-        //currentAttack = attacks[attackIndex];
+        if (currentAttack != null)
+        {
+            previousAttackInfo = currentAttack.GetComponent<MeleeAttack>();
+            Destroy(currentAttack);
+        }
+        
+        currentAttack = CreateAttackInstance(attacks[0]);
 
-        currentAttack = Instantiate(attacks[0]);
-
-        Debug.Log(currentAttack);
-
+        //}
+        //else
+        //{
+            
+        //    currentAttack = CreateAttackInstance(attacks[0]);
+        //}
+        
     }
+
+    private GameObject CreateAttackInstance(MeleeAttack attackType_)
+    {
+        GameObject attack = new GameObject("attack", typeof(MeleeAttack), typeof(SpriteRenderer), typeof(PolygonCollider2D));
+        MeleeAttack ma = attack.GetComponent<MeleeAttack>();
+        SpriteRenderer sr = attack.GetComponent<SpriteRenderer>();
+        PolygonCollider2D pc = attack.GetComponent<PolygonCollider2D>();
+
+        attack.name = ("" + Time.deltaTime); //Just to show that it is a new gameobject being created
+        ma = attackType_;
+        sr.sprite = attackType_.sprite;
+        pc = attackType_.hitbox;
+
+        return attack;
+    }
+
 }

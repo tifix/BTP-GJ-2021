@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
-{    
-    public Collider2D attackBox;
+{
+    public Sprite sprite;
+    public PolygonCollider2D hitbox;
 
-    public float minDuration, maxDuration;
+    public float minDuration;
+    public float maxDuration = 4f;
     public float damage;
     public float minTimingInterval, maxTimingInterval;
 
     // Start is called before the first frame update
     void Start()
     {
-        attackBox = new Collider2D();        
-        //Destroy(this, maxDuration);
+        hitbox = new PolygonCollider2D();        
+        Destroy(gameObject, maxDuration);        
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -23,5 +25,10 @@ public class MeleeAttack : MonoBehaviour
         {
             health.TakeDamage(damage);
         }
+    }
+
+    private void OnDestroy()
+    {
+        Debug.Log("It's been destroyed");
     }
 }

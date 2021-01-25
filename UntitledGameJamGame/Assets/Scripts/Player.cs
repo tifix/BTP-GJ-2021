@@ -19,30 +19,15 @@ public class Player : MonoBehaviour
         timeSinceLastAttack = Time.deltaTime - timeOfLastAttack;
 
         if (Input.GetMouseButtonDown(0)) //Upon the mouse being down for 1 frame.
-        {                        
-            if (roster == null)
+        {
+            if (roster.meleeWeapon.previousAttackInfo) //If there has been a previous attack with that weapon
             {
-                Debug.Log("Roster is null");
-            }
-
-            if (roster.meleeWeapon == null)
-            {
-                Debug.Log("meleeweapon is null");
-            }
-
-            if (roster.meleeWeapon.previousAttack == null)
-            {
-                Debug.Log("previousattack is null");
-            }
-
-            if (roster.meleeWeapon.previousAttack != null)
-            {
-                if (timeSinceLastAttack > roster.meleeWeapon.previousAttack.minDuration) //If the time since the last attack is greater than the minimum duration of the previous attack
+                if (timeSinceLastAttack > roster.meleeWeapon.currentAttack.GetComponent<MeleeAttack>().minDuration) //If the time since the last attack is greater than the minimum duration of the previous attack
                 {
                     MeleeAttack();
                 }
             }
-            else
+            else //If there hasn't been a previous attack with that weapon
             {
                 MeleeAttack();
             }
@@ -51,17 +36,6 @@ public class Player : MonoBehaviour
 
     private void MeleeAttack()
     {
-
-        //if (roster.meleeWeapon.attacks[roster.meleeWeapon.attackIndex] == null)
-        //{
-        //    Debug.Log("p.roster.meleeWeapon.attacks[p.roster.meleeWeapon.attackIndex] is null");
-        //}
-
-        if (roster.meleeWeapon.attacks[0] == null)
-        {
-            Debug.Log("p.roster.meleeWeapon.attacks[0] is null");
-        }
-
         roster.meleeWeapon.attackIndex = 0;/* = wc.ComboProcessing();*/
         roster.meleeWeapon.Swing();
         StartTimerUponAttack();
