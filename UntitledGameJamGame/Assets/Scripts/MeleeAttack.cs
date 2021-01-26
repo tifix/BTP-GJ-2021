@@ -8,6 +8,7 @@ public class MeleeAttack : MonoBehaviour
     public Sprite sprite;
     public PolygonCollider2D hitbox;
 
+    public Vector3 size= Vector3.one;
     public float minDuration;
     public float maxDuration = 4f;
     public float damage;
@@ -15,13 +16,14 @@ public class MeleeAttack : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {  
-        Destroy(gameObject, maxDuration);        
+    {
+        transform.localScale = size;
+        Destroy(gameObject, maxDuration);
+        GetComponent<SpriteRenderer>().flipY = new bool[] { true, false }[Random.Range(0, 2)];
     }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {        
-        if (col.gameObject.TryGetComponent(out Health health) && col.gameObject != gameObject)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent(out Health health) && collision.gameObject != Player.instance.gameObject)
         {
             health.TakeDamage(damage);
         }

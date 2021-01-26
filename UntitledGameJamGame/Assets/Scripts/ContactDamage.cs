@@ -38,6 +38,7 @@ public class ContactDamage : MonoBehaviour
 
                 //applying knockback force
                 target.GetComponent<Rigidbody2D>().AddForce(knockback_vector.normalized * knockback_amount, ForceMode2D.Impulse);
+                Debug.Log("Knockback");
                 return;
             }
 

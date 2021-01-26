@@ -16,8 +16,14 @@ public class Health : MonoBehaviour
 
     public virtual void TakeDamage(float damage)
     {
+        if(TryGetComponent<HealthRegen>(out HealthRegen HR))
+        {
+            HR.DamageTaken();
+        }
+
         //Show hit particles
         GameObject hit_splash = Instantiate(hit_effect, transform);
+        hit_splash.transform.SetParent(null);
         Destroy(hit_splash, 1);
 
         //apply damage

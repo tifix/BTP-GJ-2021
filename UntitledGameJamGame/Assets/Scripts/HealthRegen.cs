@@ -24,13 +24,12 @@ public class HealthRegen : MonoBehaviour
     public void Update()
     {
         //Debug utility - asterisk to take damage
-        if (Input.GetKeyDown(KeyCode.Asterisk)) TakeDamage(1);
+        if (Input.GetKeyDown(KeyCode.Asterisk)) h.TakeDamage(1);
     }
 
     //If the player does not take damage for set amount of time, he will heal
-    public void TakeDamage(float damage)
+    public void DamageTaken()
     {
-        h.TakeDamage(damage);
 
         //Stop healing and reset the out of combat timer
         out_of_combat = false;

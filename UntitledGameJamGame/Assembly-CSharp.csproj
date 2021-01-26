@@ -55,7 +55,6 @@
     <Compile Include="Assets\Scripts\CamEffects.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\HealthRegen.cs" />
-    <Compile Include="Assets\Scripts\WeaponRoster.cs" />
     <Compile Include="Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\MeleeAttack.cs" />
     <Compile Include="Assets\Scripts\WeaponCombo.cs" />

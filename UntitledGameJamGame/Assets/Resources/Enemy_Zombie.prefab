@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1193185041609628455}
   - component: {fileID: 5221314719559294330}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 1
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contact_damage: 1
-  knockback_amount: 1
+  knockback_amount: 7
   damage_props: 1
   damage_friendly: 0
 --- !u!114 &5931382731238643560
@@ -176,8 +176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd77ac0ad3398264e9fca658090e5e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
-  max_HP: 0
+  HP: 10
+  max_HP: 10
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
 --- !u!114 &1193185041609628455
 MonoBehaviour:

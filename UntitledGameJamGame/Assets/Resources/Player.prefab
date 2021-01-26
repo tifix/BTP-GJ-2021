@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265b8fbf98cf7b84d90dbf91b00fe7d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roster: {fileID: 0}
+  weapon: {fileID: 0}
   timeSinceLastAttack: 0
   timeOfLastAttack: 0
 --- !u!1 &8117298539634543735
@@ -306,8 +306,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1218533206852421031}
-  - component: {fileID: 9170662874592524541}
   - component: {fileID: 421076063658333844}
+  - component: {fileID: 7223012660596604510}
   m_Layer: 0
   m_Name: Weapons
   m_TagString: Untagged
@@ -329,24 +329,6 @@ Transform:
   m_Father: {fileID: 6150030210208391364}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9170662874592524541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8117298539634543735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0df048055d0807c46ae5a67f2458e0e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meleeWeapons: []
-  meleeWeapon:
-    attacks: []
-    currentAttack: {fileID: 0}
-    previousAttackInfo: {fileID: 0}
-    attackIndex: 0
 --- !u!114 &421076063658333844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,3 +341,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12d361e857ca2ff4980c760b800845f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7223012660596604510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8117298539634543735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1ca0bcb7c6de44eb18f2fb24a0513a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacks: []
+  currentAttack: {fileID: 0}
+  previousAttackInfo: {fileID: 0}
+  attackIndex: 0

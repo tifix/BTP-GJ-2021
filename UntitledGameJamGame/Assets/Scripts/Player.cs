@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player instance;
     public MeleeWeapon weapon;
     WeaponCombo wc;    
 
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        instance = this;
         wc = GetComponentInChildren<WeaponCombo>();
         weapon = GetComponentInChildren<MeleeWeapon>();
     }
