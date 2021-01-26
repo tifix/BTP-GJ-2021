@@ -54,4 +54,10 @@ public class Player : MonoBehaviour
     {
         timeOfLastAttack = Time.deltaTime;
     }
+    public void OnDestroy()
+    {
+        Debug.LogWarning("Game Over!");
+        Utils.DelayedReturnToMenu();
+    }
+
 }
