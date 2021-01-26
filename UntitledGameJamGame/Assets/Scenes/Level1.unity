@@ -55005,6 +55005,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 96349550551563415, guid: 53007bec9130f4f4aa3afc653a3d2d47, type: 3}
+      propertyPath: m_Color.g
+      value: 0.49019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 96349550551563415, guid: 53007bec9130f4f4aa3afc653a3d2d47, type: 3}
+      propertyPath: m_Color.b
+      value: 0.4117647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53007bec9130f4f4aa3afc653a3d2d47, type: 3}
 --- !u!4 &1072746530 stripped
@@ -55658,7 +55666,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6150030210208391370, guid: 54582bef9ddd1884e8de0e91eaa38ee0, type: 3}
       propertyPath: time_to_start_healing
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6150030210208391370, guid: 54582bef9ddd1884e8de0e91eaa38ee0, type: 3}
       propertyPath: time_remaining
