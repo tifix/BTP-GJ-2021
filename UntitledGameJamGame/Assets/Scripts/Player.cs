@@ -9,16 +9,22 @@ public class Player : MonoBehaviour
     WeaponCombo wc;    
 
     public float timeSinceLastAttack, timeOfLastAttack;
-
-    void Start()
+    private void Awake()
     {
         instance = this;
+    }
+
+    void Start()
+    {     
         wc = GetComponentInChildren<WeaponCombo>();
         weapon = GetComponentInChildren<MeleeWeapon>();
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space)) Time.timeScale = 0.2f;
+        if (Input.GetKeyUp(KeyCode.Space)) Time.timeScale = 1;
+
         timeSinceLastAttack = Time.deltaTime - timeOfLastAttack;
 
         if (Input.GetMouseButtonDown(0)) //Upon the mouse being down for 1 frame.
