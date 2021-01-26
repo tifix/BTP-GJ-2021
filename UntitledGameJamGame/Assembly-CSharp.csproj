@@ -55,13 +55,13 @@
     <Compile Include="Assets\Scripts\CamEffects.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\HealthRegen.cs" />
+    <Compile Include="Assets\Scripts\WeaponRoster.cs" />
+    <Compile Include="Assets\Scripts\MeleeAttack.cs" />
+    <Compile Include="Assets\Scripts\WeaponCombo.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
-    <Compile Include="Assets\Scripts\MeleeAttack.cs" />
-    <Compile Include="Assets\Scripts\WeaponRoster.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\WeaponCombo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
