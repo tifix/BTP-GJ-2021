@@ -27,7 +27,13 @@ public class Health : MonoBehaviour
         Destroy(hit_splash, 1);
 
         //apply damage
-        if (HP - damage <= 0) Destroy(gameObject);
+        if (HP - damage <= 0)
+        {
+            //if killing player, defeat instead of destroying
+            if (gameObject== Player.instance.gameObject) CamEffects.instance.Defeat();
+            else Destroy(gameObject);
+
+        }
         else HP -= damage;
     }
 

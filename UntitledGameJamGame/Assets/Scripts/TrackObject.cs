@@ -75,7 +75,7 @@ public class TrackObject : MonoBehaviour
         if (seing != null) destination = seing.transform.position;
         else destination = spawn_position;
 
-        if (follow_tracked) navmesh_base.agent.destination=destination;
+        if (follow_tracked && navmesh_base.agent.isActiveAndEnabled && navmesh_base.agent.isOnNavMesh) navmesh_base.agent.destination = destination; 
     }
 
 }
