@@ -11,9 +11,16 @@ public class Health : MonoBehaviour
 {
     public float HP;
     public float max_HP;
+    public GameObject hit_effect;
+
 
     public virtual void TakeDamage(float damage)
     {
+        //Show hit particles
+        GameObject hit_splash = Instantiate(hit_effect, transform);
+        Destroy(hit_splash, 1);
+
+        //apply damage
         if (HP - damage <= 0) Destroy(gameObject);
         else HP -= damage;
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Health))]
 public class HealthRegen : MonoBehaviour
 {
     [Header("out of combat, passive healing parameters")]
@@ -15,13 +16,9 @@ public class HealthRegen : MonoBehaviour
 
     public GameObject hit_effect;
 
-    Health h;
+    public Health h;
 
-    public void Start()
-    {
-        h = GetComponent<Health>();
-
-    }
+    public void Start() => h = GetComponent<Health>();
 
 
     public void Update()
@@ -33,11 +30,7 @@ public class HealthRegen : MonoBehaviour
     //If the player does not take damage for set amount of time, he will heal
     public void TakeDamage(float damage)
     {
-        TakeDamage(damage);
-
-        //Show hit particles
-        GameObject hit_splash = Instantiate(hit_effect, transform);
-        Destroy(hit_splash, 1);
+        h.TakeDamage(damage);
 
         //Stop healing and reset the out of combat timer
         out_of_combat = false;

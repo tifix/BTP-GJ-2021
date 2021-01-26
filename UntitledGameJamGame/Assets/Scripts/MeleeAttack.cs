@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MeleeAttack : MonoBehaviour
 {
     public Sprite sprite;
@@ -14,8 +15,7 @@ public class MeleeAttack : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        hitbox = new PolygonCollider2D();        
+    {  
         Destroy(gameObject, maxDuration);        
     }
 
@@ -27,8 +27,9 @@ public class MeleeAttack : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    public void DestroyGameObject()
     {
         Debug.Log("It's been destroyed");
+        Destroy(gameObject);
     }
 }

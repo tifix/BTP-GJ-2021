@@ -56,15 +56,16 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\HealthRegen.cs" />
     <Compile Include="Assets\Scripts\WeaponRoster.cs" />
+    <Compile Include="Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\MeleeAttack.cs" />
     <Compile Include="Assets\Scripts\WeaponCombo.cs" />
     <Compile Include="Assets\Scripts\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
-    <Compile Include="Assets\Scripts\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\ContactDamage.cs" />
     <Compile Include="Assets\Scripts\MeleeWeapon.cs" />
     <Compile Include="Assets\Scripts\WorldFalloff.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Dash.cs" />
+    <Compile Include="Assets\Scripts\MoveOnNavMesh.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

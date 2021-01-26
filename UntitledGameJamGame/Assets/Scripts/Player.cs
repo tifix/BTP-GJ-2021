@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public WeaponRoster roster = new WeaponRoster();
+    public MeleeWeapon weapon;
     WeaponCombo wc;    
 
     public float timeSinceLastAttack, timeOfLastAttack;
 
     void Start()
     {
-        wc = GetComponent<WeaponCombo>();
+        wc = GetComponentInChildren<WeaponCombo>();
+        weapon = GetComponentInChildren<MeleeWeapon>();
     }
 
     void Update()
@@ -20,9 +21,9 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0)) //Upon the mouse being down for 1 frame.
         {
-            if (roster.meleeWeapon.previousAttackInfo) //If there has been a previous attack with that weapon
+            if (weapon.previousAttackInfo) //If there has been a previous attack with that weapon
             {
-                if (timeSinceLastAttack > roster.meleeWeapon.currentAttack.GetComponent<MeleeAttack>().minDuration) //If the time since the last attack is greater than the minimum duration of the previous attack
+                if (timeSinceLastAttack > weapon.currentAttack.GetComponent<MeleeAttack>().minDuration) //If the time since the last attack is greater than the minimum duration of the previous attack
                 {
                     MeleeAttack();
                 }
@@ -36,8 +37,8 @@ public class Player : MonoBehaviour
 
     private void MeleeAttack()
     {
-        roster.meleeWeapon.attackIndex = 0;/* = wc.ComboProcessing();*/
-        roster.meleeWeapon.Swing();
+        weapon.attackIndex = 0;/* = wc.ComboProcessing();*/
+        weapon.Swing();
         StartTimerUponAttack();
     }
 
