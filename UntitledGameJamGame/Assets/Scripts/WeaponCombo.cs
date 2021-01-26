@@ -14,14 +14,14 @@ public class WeaponCombo : MonoBehaviour
 
     public int ComboProcessing()
     {        
-        if (p.timeSinceLastAttack >= p.roster.meleeWeapon.attacks[p.roster.meleeWeapon.attackIndex].minTimingInterval
-                    && p.timeSinceLastAttack <= p.roster.meleeWeapon.attacks[p.roster.meleeWeapon.attackIndex].maxTimingInterval) //if the time since last attack is between the timing interval
+        if (p.timeSinceLastAttack >= p.weapon.attacks[p.weapon.attackIndex].minTimingInterval
+                    && p.timeSinceLastAttack <= p.weapon.attacks[p.weapon.attackIndex].maxTimingInterval) //if the time since last attack is between the timing interval
         {
-            if (comboIndex < p.roster.meleeWeapon.attacks.Count) //If the comboNumber is less than the number of attacks on the weapon
+            if (comboIndex < p.weapon.attacks.Count) //If the comboNumber is less than the number of attacks on the weapon
             {
                 comboIndex++; //Add to the comboNumber
             }
-            else if (comboIndex >= p.roster.meleeWeapon.attacks.Count) //If the comboNumber is greater than or equal to the amount of attacks
+            else if (comboIndex >= p.weapon.attacks.Count) //If the comboNumber is greater than or equal to the amount of attacks
             {
                 comboIndex = 0; //Reset the combo
             }

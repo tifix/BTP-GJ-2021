@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: bdbbb800426a51a478807ebbda956931
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6517843450182074315
+    second: EdgeTiles_0
+  - first:
+      213: -6511526661306590514
+    second: EdgeTiles_1
+  - first:
+      213: 1647949657376381920
+    second: EdgeTiles_2
+  - first:
+      213: 2280652079980369134
+    second: EdgeTiles_3
+  - first:
+      213: 4962224766704406796
+    second: EdgeTiles_0
+  - first:
+      213: 365073342283084569
+    second: EdgeTiles_1
+  - first:
+      213: 8611139838343257920
+    second: EdgeTiles_2
+  - first:
+      213: -834667371947522686
+    second: EdgeTiles_3
+  - first:
+      213: 3925420336821684955
+    second: EdgeTiles_4
+  - first:
+      213: -1779158759209359252
+    second: EdgeTiles_5
+  - first:
+      213: -5064794532534378862
+    second: EdgeTiles_6
+  - first:
+      213: -6161469150694723974
+    second: EdgeTiles_7
+  - first:
+      213: -4386219806713173611
+    second: EdgeTiles_8
+  - first:
+      213: 8419266540249656834
+    second: EdgeTiles_9
+  - first:
+      213: -8465242382360104477
+    second: EdgeTiles_10
+  - first:
+      213: 2310018130910850260
+    second: EdgeTiles_4
+  - first:
+      213: 3771216243905103710
+    second: EdgeTiles_5
+  - first:
+      213: 3529711104278416046
+    second: EdgeTiles_6
+  - first:
+      213: 8841808784316714025
+    second: EdgeTiles_7
+  - first:
+      213: -6060096330192356454
+    second: EdgeTiles_8
+  - first:
+      213: -3972365065300759816
+    second: EdgeTiles_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 250
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EdgeTiles_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 471
+        width: 246
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01df03622d5dd440800000000000000
+      internalID: 4962224766704406796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_1
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 468
+        width: 245
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9137fb34540011500800000000000000
+      internalID: 365073342283084569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_2
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 467
+        width: 246
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f1aa72f0ae08770800000000000000
+      internalID: 8611139838343257920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 333
+        width: 240
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee45c7bbbf086af10800000000000000
+      internalID: 2280652079980369134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_4
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 334
+        width: 265
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc27a54045de0020800000000000000
+      internalID: 2310018130910850260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_5
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 362
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57852d613d065430800000000000000
+      internalID: 3771216243905103710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_6
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 320
+        width: 246
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa44425c8d0cf030800000000000000
+      internalID: 3529711104278416046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 248
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c40215e3a64ba70800000000000000
+      internalID: 8841808784316714025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_8
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 180
+        width: 250
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9b7c36de7636eba0800000000000000
+      internalID: -6060096330192356454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdgeTiles_9
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 166
+        width: 258
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8faa39405035fd8c0800000000000000
+      internalID: -3972365065300759816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
