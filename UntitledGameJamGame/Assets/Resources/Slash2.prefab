@@ -51,8 +51,8 @@ MonoBehaviour:
   minDuration: 0
   maxDuration: 0.1
   damage: 4
-  minTimingInterval: 0
-  maxTimingInterval: 0.1
+  minTimingInterval: 1
+  maxTimingInterval: 1.1
 --- !u!60 &5020376334212740530
 PolygonCollider2D:
   m_ObjectHideFlags: 0

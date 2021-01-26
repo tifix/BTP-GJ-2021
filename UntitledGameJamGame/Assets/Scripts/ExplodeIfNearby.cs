@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ExplodeIfNearby : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class ExplodeIfNearby : MonoBehaviour
     private float damage = 5;
     public bool fuse_lit = false;
 
+
     void Start()
     {
         tracker = GetComponent<TrackObject>();
@@ -23,7 +25,7 @@ public class ExplodeIfNearby : MonoBehaviour
     void FixedUpdate()
     {
         //if target comes too close - bust
-        if (tracker.seing!=null && tracker.distance_to_seen < detonation_distance && fuse_lit==false) StartCoroutine(Burst());
+        if (tracker.seing!=null && tracker.distance_to_seen < detonation_distance && fuse_lit==false) StartCoroutine(ChargeAndPop());
     }
 
     private IEnumerator ChargeAndPop()
@@ -32,7 +34,7 @@ public class ExplodeIfNearby : MonoBehaviour
         tracker.navmesh_base.agent.speed *= 0.1f;
         GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(detonation_fuse);
-        Destroy(gameObject);
+        h.TakeDamage(999);
     }
 
     private void Explode()
@@ -41,9 +43,8 @@ public class ExplodeIfNearby : MonoBehaviour
         foreach (Collider2D victim in impacted)
         {
             Debug.Log(victim.name + " hit!");
-            if (victim.gameObject != gameObject) if (victim.gameObject.TryGetComponent<Health>(out Health h)) h.TakeDamage(damage);
+            if (victim.gameObject.TryGetComponent<Health>(out Health helt)) helt.TakeDamage(damage);
         }
-        
     }
 
     private void OnDestroy()
