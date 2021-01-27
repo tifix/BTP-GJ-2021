@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Dash : MonoBehaviour
 {
-    private float dash_distance = 15;
-    private float dash_cooldown = 1;
-    private bool can_dash = true;
+    public float dash_distance = 15;
+    public float dash_cooldown = 1;
+    public bool can_dash = true;
 
     public IEnumerator Woooosh(Vector2 destination, bool cam_distort)
     {

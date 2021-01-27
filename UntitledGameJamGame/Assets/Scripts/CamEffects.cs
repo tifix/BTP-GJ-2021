@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CamEffects : MonoBehaviour
 {
     public static CamEffects instance;
+    private Animator anim;
 
     private float shake_pow_basic = 0.05f;
     private float shake_dur_basic = 0.1f;
@@ -15,11 +17,14 @@ public class CamEffects : MonoBehaviour
 
     private float FOV_base;
 
+    public Text defeat_text;
+    public Text win_text;
 
     void Awake()
     {
         VerifySingleInstance();
         FOV_base = GetComponent<Camera>().orthographicSize;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -57,6 +62,23 @@ public class CamEffects : MonoBehaviour
         StartCoroutine(CameFOVDistort(fov_amount, fov_buildup, fov_hangtime));
     }
 
+
+    public void Defeat()
+    {
+        StopAllCoroutines();
+        Vector2 position = Player.instance.transform.position;
+        Player.instance.transform.position=new Vector2(999, 999);
+        transform.SetParent(null);
+        transform.position = position;
+        Debug.LogWarning("Game Over!");
+        anim.SetTrigger("Defeat");
+        StartCoroutine(Utils.DelayedReturnToMenu());
+    }
+
+    public void Victory()
+    {
+        anim.SetTrigger("Victory");
+    }
 
     #endregion
 

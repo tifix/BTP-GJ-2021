@@ -54,4 +54,5 @@ public class Player : MonoBehaviour
     {
         timeOfLastAttack = Time.deltaTime;
     }
+
 }
