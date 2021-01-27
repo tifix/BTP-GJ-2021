@@ -29,7 +29,7 @@ public class Utils : MonoBehaviour
 
     public static IEnumerator DelayedReturnToMenu()
     {
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(6);
         ReturnToMenu();
     }
 

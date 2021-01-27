@@ -7,26 +7,27 @@ public class MeleeWeapon : MonoBehaviour
 {    
     public List<MeleeAttack> attacks = new List<MeleeAttack>();
     public GameObject currentAttack = null;
-    public MeleeAttack previousAttackInfo;// = new MeleeAttack();
+    public AttackData previousAttackInfo;// = new MeleeAttack();
     public int attackIndex = 0;
 
     public void Swing()
     {
         if (currentAttack != null)
         {
-            previousAttackInfo = currentAttack.GetComponent<MeleeAttack>();
-            previousAttackInfo.DestroyGameObject();
+            previousAttackInfo.StoreData(currentAttack.GetComponent<MeleeAttack>());
+            Destroy(currentAttack);
+            //previousAttackInfo.DestroyGameObject();
         }
         
-        currentAttack = CreateAttackInstance(attacks[Random.Range(0, attacks.Count)]);
+        currentAttack = CreateAttackInstance(attacks[attackIndex]);    //Random.Range(0, attacks.Count)
 
         //}
         //else
         //{
-            
+
         //    currentAttack = CreateAttackInstance(attacks[0]);
         //}
-        
+
     }
 
     private GameObject CreateAttackInstance(MeleeAttack attackType_)
@@ -41,7 +42,7 @@ public class MeleeWeapon : MonoBehaviour
         SpriteRenderer sr = attack.GetComponent<SpriteRenderer>();
         PolygonCollider2D pc = attack.GetComponent<PolygonCollider2D>();
 
-        attack.name = ("" + Time.deltaTime); //Just to show that it is a new gameobject being created
+        attack.name = ("" + Player.instance.timeSinceLastAttack); //Just to show that it is a new gameobject being created
         ma = attackType_;
         sr.sprite = attackType_.sprite;
         pc = attackType_.hitbox;

@@ -52,11 +52,13 @@
     <UnityVersion>2020.1.4f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Ricochet.cs" />
     <Compile Include="Assets\Scripts\CamEffects.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\IEnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
     <Compile Include="Assets\Scripts\HealthRegen.cs" />
+    <Compile Include="Assets\Scripts\Charger.cs" />
     <Compile Include="Assets\Scripts\ExplodeIfNearby.cs" />
     <Compile Include="Assets\Scripts\Dash.cs" />
     <Compile Include="Assets\Scripts\MeleeAttack.cs" />
@@ -69,7 +71,7 @@
     <Compile Include="Assets\Scripts\WorldFalloff.cs" />
     <Compile Include="Assets\Scripts\MoveOnNavMesh.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Charger.cs" />
+    <Compile Include="Assets\Scripts\AttackData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
