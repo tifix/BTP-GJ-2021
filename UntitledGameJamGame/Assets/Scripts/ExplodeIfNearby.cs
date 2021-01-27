@@ -42,7 +42,6 @@ public class ExplodeIfNearby : MonoBehaviour
         Collider2D[] impacted = Physics2D.OverlapCircleAll(transform.position, explosion_range);
         foreach (Collider2D victim in impacted)
         {
-            Debug.Log(victim.name + " hit!");
             if (victim.gameObject.TryGetComponent<Health>(out Health helt)) helt.TakeDamage(damage);
         }
     }

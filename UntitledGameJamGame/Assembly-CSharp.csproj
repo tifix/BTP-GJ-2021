@@ -52,9 +52,7 @@
     <UnityVersion>2020.1.4f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Assets\Scripts\Ricochet.cs" />
     <Compile Include="Assets\Scripts\CamEffects.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\IEnemyBehaviour.cs" />
@@ -73,6 +71,7 @@
     <Compile Include="Assets\Scripts\WorldFalloff.cs" />
     <Compile Include="Assets\Scripts\MoveOnNavMesh.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\AttackData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

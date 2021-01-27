@@ -21,6 +21,8 @@ public class Health : MonoBehaviour
             HR.DamageTaken();
         }
 
+        Debug.Log(gameObject.name + " taken " + damage + " damage");
+
         //Show hit particles
         GameObject hit_splash = Instantiate(hit_effect, transform);
         hit_splash.transform.SetParent(null);

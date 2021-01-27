@@ -71,12 +71,44 @@ public class CamEffects : MonoBehaviour
         transform.SetParent(null);
         transform.position = position;
         Debug.LogWarning("Game Over!");
+
+        defeat_text.text = new string[]
+        {
+            "Well, that didn't go as planned.",
+            "F",
+            "[*]",
+            "Try again.",
+            "Your persistence is admirable. Unlike your ability.",
+            "Try harder.",
+            "Next time - try dodging.",
+            //"Next time you have a chance to kill someone - don't hesitate",
+            "Goodnight mr. Player",
+            "No mr. Player, I expect you to die.",
+            "Do you win as gracefully as you loose?",
+            "Shocking, not at all shocking.",
+            "I like the way you die, boy.",
+            "Screaming won't help, but it is worth a try.",
+            "You now have time to bleed.",
+            "Muda! Muda! Muda! Muda! Muda! Muda! Muda! Muda! Muda! Muda! Muda! Muda... MUDA!",
+            "Not quite there yet."
+
+        }[Random.Range(0, 16)];
         anim.SetTrigger("Defeat");
         StartCoroutine(Utils.DelayedReturnToMenu());
     }
 
     public void Victory()
     {
+        win_text.text = new string[]
+        {
+            "Victory!",
+            "Look mom, I made it!",
+            "A congratulations, it's a celebration!",
+            "You win!",
+            "Nice.",
+            "Wicked!",
+            "You get one awesome token!"
+        }[Random.Range(0, 7)];
         anim.SetTrigger("Victory");
     }
 
