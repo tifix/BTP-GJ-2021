@@ -22,8 +22,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) Time.timeScale = 0.2f;
-        if (Input.GetKeyUp(KeyCode.Space)) Time.timeScale = 1;
+        //if (Input.GetKeyDown(KeyCode.Space)) Time.timeScale = 0.2f;
+        //if (Input.GetKeyUp(KeyCode.Space)) Time.timeScale = 1;
 
         timeSinceLastAttack = Time.deltaTime - timeOfLastAttack;
 

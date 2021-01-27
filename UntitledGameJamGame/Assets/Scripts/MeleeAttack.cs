@@ -9,9 +9,13 @@ public class MeleeAttack : MonoBehaviour
     public PolygonCollider2D hitbox;
 
     public Vector3 size= Vector3.one;
+
+    [Tooltip("interval between attacks")]
     public float minDuration;
     public float maxDuration = 4f;
     public float damage;
+
+    [Tooltip("combo timing margins")]
     public float minTimingInterval, maxTimingInterval;
 
     // Start is called before the first frame update
