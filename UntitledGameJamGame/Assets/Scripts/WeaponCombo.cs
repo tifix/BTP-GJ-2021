@@ -24,7 +24,7 @@ public class WeaponCombo : MonoBehaviour
         }
         else //If the time since the last attack is not within the PERFECT timing interval
         {
-            Attack_cycling_index = 0; //return to default attack
+            Attack_cycling_index = Random.Range(0,p.weapon.attacks.Count); //return to default attack
         }
 
         return Attack_cycling_index;
