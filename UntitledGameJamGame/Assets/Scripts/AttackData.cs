@@ -12,6 +12,7 @@ public class AttackData : MeleeAttack
         minAttackInterval = attack.minAttackInterval;
         maxTimingInterval = attack.maxTimingInterval;
         minTimingInterval = attack.minTimingInterval;
+        pure_attack_duration = attack.pure_attack_duration;
     }
     public override void Start()
     {

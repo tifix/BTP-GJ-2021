@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public static Player instance;
     public MeleeWeapon weapon;
+    public float max_dmg=10;
     WeaponCombo wc;    
 
     public float timeSinceLastAttack, timeOfLastAttack;
@@ -33,7 +34,6 @@ public class Player : MonoBehaviour
             {
                 if (timeSinceLastAttack > weapon.currentAttack.GetComponent<MeleeAttack>().minAttackInterval) //If the time since the last attack is greater than the minimum duration of the previous attack
                 {
-                    Debug.Log("Case C - attack perfectly timed");
                     MeleeAttack();
                     return;
                 }

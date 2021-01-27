@@ -55271,6 +55271,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a203ba0e2fd49e46b589d03cb135544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  combo: {fileID: 0}
   sprite: {fileID: 0}
   hitbox: {fileID: 0}
   size: {x: 1, y: 1, z: 1}

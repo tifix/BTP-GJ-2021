@@ -45,14 +45,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadee12635e94564195ec0fd869b92f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  combo: {fileID: 0}
   sprite: {fileID: 21300000, guid: f0400e7acfd5fb34f9ad8f1234b5d760, type: 3}
   hitbox: {fileID: 8272119948101218128}
   size: {x: 0.5, y: 0.5, z: 0.5}
-  minAttackInterval: 0.1
-  maxDuration: 0.3
-  damage: 4
-  minTimingInterval: 0.2
-  maxTimingInterval: 0.27
+  pure_attack_duration: 0.1
+  minAttackInterval: 0.35
+  maxDuration: 1.2
+  damage: 2
+  minTimingInterval: 0.9
+  maxTimingInterval: 1.1
 --- !u!60 &8272119948101218128
 PolygonCollider2D:
   m_ObjectHideFlags: 0
