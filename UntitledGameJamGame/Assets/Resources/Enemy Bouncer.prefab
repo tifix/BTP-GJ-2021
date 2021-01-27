@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7232932447641143671}
   - component: {fileID: 3351225201057995692}
   - component: {fileID: 9061035717396707941}
+  - component: {fileID: 2040048279892050389}
   m_Layer: 0
   m_Name: Enemy Bouncer
   m_TagString: Enemy
@@ -33,7 +34,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5655825723789361519}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.353545, y: -0.0824213, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
@@ -104,7 +105,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 4
+  m_LinearDrag: 0.15
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -162,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6d684caba8edc488de8ff4466663e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contact_damage: 1
-  knockback_amount: 7
+  contact_damage: 2
+  knockback_amount: 3
   damage_props: 1
   damage_friendly: 0
 --- !u!114 &9098923282962842469
@@ -195,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   looking_for: {fileID: 0}
   seing: {fileID: 0}
-  detection_radius: 6
+  detection_radius: 9
   distance_to_seen: 0
   follow_tracked: 0
   destination: {x: 0, y: 0}
@@ -225,8 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c0f6f5a2c4fe64da050554d6f5f0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dash_distance: 50
-  dash_cooldown: 3
+  dash_distance: 25
+  dash_cooldown: 5
   can_dash: 1
 --- !u!114 &9061035717396707941
 MonoBehaviour:
@@ -240,3 +241,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123e3c2409282cc439e44ae56478a87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2040048279892050389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5655825723789361519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61233c10bcb27a44a8e69bd2929f3d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity_retained: 0.9

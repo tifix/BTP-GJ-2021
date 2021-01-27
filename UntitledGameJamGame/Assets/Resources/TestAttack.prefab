@@ -48,11 +48,11 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: f0400e7acfd5fb34f9ad8f1234b5d760, type: 3}
   hitbox: {fileID: 8272119948101218128}
   size: {x: 0.5, y: 0.5, z: 0.5}
-  minDuration: 1
-  maxDuration: 1.2
+  minAttackInterval: 0.1
+  maxDuration: 0.3
   damage: 4
-  minTimingInterval: 1
-  maxTimingInterval: 1.1
+  minTimingInterval: 0.2
+  maxTimingInterval: 0.27
 --- !u!60 &8272119948101218128
 PolygonCollider2D:
   m_ObjectHideFlags: 0

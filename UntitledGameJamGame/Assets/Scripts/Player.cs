@@ -25,19 +25,26 @@ public class Player : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.Space)) Time.timeScale = 0.2f;
         //if (Input.GetKeyUp(KeyCode.Space)) Time.timeScale = 1;
 
-        timeSinceLastAttack = Time.deltaTime - timeOfLastAttack;
+        timeSinceLastAttack = Time.time - timeOfLastAttack;
 
         if (Input.GetMouseButtonDown(0)) //Upon the mouse being down for 1 frame.
         {
-            if (weapon.previousAttackInfo) //If there has been a previous attack with that weapon
+            if (weapon.currentAttack != null) //If there has been a previous attack with that weapon
             {
-                if (timeSinceLastAttack > weapon.currentAttack.GetComponent<MeleeAttack>().minDuration) //If the time since the last attack is greater than the minimum duration of the previous attack
+                if (timeSinceLastAttack > weapon.currentAttack.GetComponent<MeleeAttack>().minAttackInterval) //If the time since the last attack is greater than the minimum duration of the previous attack
                 {
+                    Debug.Log("Case C - attack perfectly timed");
                     MeleeAttack();
+                    return;
+                }
+                else
+                {
+                    Debug.Log("Case A - attack too early - not attacking");
                 }
             }
             else //If there hasn't been a previous attack with that weapon
             {
+                Debug.Log("Case B - attack too late, combo broken");
                 MeleeAttack();
             }
         }
@@ -45,14 +52,15 @@ public class Player : MonoBehaviour
 
     private void MeleeAttack()
     {
-        weapon.attackIndex = 0;/* = wc.ComboProcessing();*/
+
+        weapon.attackIndex = wc.ComboProcessing();
         weapon.Swing();
         StartTimerUponAttack();
     }
 
     public void StartTimerUponAttack()
     {
-        timeOfLastAttack = Time.deltaTime;
+        timeOfLastAttack = Time.time;
     }
 
 }
