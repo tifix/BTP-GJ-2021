@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CamEffects : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class CamEffects : MonoBehaviour
 
     private float FOV_base;
 
+    public Text defeat_text;
+    public Text win_text;
 
     void Awake()
     {

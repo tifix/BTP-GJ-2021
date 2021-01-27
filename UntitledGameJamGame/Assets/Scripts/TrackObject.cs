@@ -14,12 +14,12 @@ public class TrackObject : MonoBehaviour
 
     public  float detection_radius = 7;
     private float check_interval = 0.2f;
-    public float distance_to_seen;
+    [HideInInspector] public float distance_to_seen;
 
     [Tooltip("position to which return after looking_for walks too far")]
     private Vector2 spawn_position;
     public bool follow_tracked;
-    private Vector2 destination;
+    [HideInInspector] public Vector2 destination;
 
     
     public MoveOnNavMesh navmesh_base;

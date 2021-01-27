@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7973735613614270815}
   - component: {fileID: 3914396775975628546}
   - component: {fileID: -237631894708273703}
+  - component: {fileID: 3426519582309129232}
   m_Layer: 0
   m_Name: Enemy Charger
   m_TagString: Enemy
@@ -195,7 +196,9 @@ MonoBehaviour:
   looking_for: {fileID: 0}
   seing: {fileID: 0}
   detection_radius: 6
+  distance_to_seen: 0
   follow_tracked: 0
+  destination: {x: 0, y: 0}
   navmesh_base: {fileID: 3914396775975628546}
 --- !u!114 &3914396775975628546
 MonoBehaviour:
@@ -220,5 +223,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78c0f6f5a2c4fe64da050554d6f5f0a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dash_distance: 25
+  dash_cooldown: 3
+  can_dash: 1
+--- !u!114 &3426519582309129232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040048280536180506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 123e3c2409282cc439e44ae56478a87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
