@@ -267,6 +267,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile_prefab: {fileID: 101568141926870450, guid: 9f9eb10e2f0a343469c5911408d2d2dd, type: 3}
-  firing_interval: 5
+  firing_interval: 3
   time_at_last_burst: 0
-  telegraph_length: 2
+  telegraph_length: 0
+  bullet_death:
+    m_PersistentCalls:
+      m_Calls: []
