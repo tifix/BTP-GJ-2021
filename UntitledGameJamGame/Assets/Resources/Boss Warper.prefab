@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6d684caba8edc488de8ff4466663e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contact_damage: 4
-  knockback_amount: 4
+  contact_damage: 1
+  knockback_amount: 3
   damage_props: 1
   damage_friendly: 0
 --- !u!114 &1687093158461096460
@@ -270,6 +270,6 @@ MonoBehaviour:
   firing_interval: 3
   time_at_last_burst: 0
   telegraph_length: 0
-  bullet_death:
+  bullet_fired:
     m_PersistentCalls:
       m_Calls: []

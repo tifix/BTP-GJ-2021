@@ -24,7 +24,7 @@ public class Boss : MonoBehaviour
         h = GetComponent<Health>();
         track = GetComponent<TrackObject>();
         track.target_spotted.AddListener(OnBossEngaged);
-        SP.bullet_death.AddListener(WarpStarter);
+        SP.bullet_fired.AddListener(WarpStarter);
     }
     public void OnBossEngaged()
     {
@@ -57,7 +57,10 @@ public class Boss : MonoBehaviour
     public List<Ray2D> ShuffleTrajectiories(int amount)
     {
         List<Ray2D> ray2Ds = new List<Ray2D>();
-        for (int i = 0; i < amount; i++)
+
+        //Alway fire one at the player
+        ray2Ds.Add(new Ray2D(transform.position, Player.instance.transform.position - transform.position));
+        for (int i = 0; i < amount-1; i++)
         {
             Vector2 origin = transform.position;
             
@@ -81,7 +84,7 @@ public class Boss : MonoBehaviour
             else if (h.HP > h.max_HP * 0.3f) num_of_projectiles_spawned = 4;
             else num_of_projectiles_spawned = 5;
 
-            if(Time.time-SP.time_at_last_burst>SP.firing_interval) SP.projectile_trajectories=ShuffleTrajectiories(num_of_projectiles_spawned); //Now this one, I am proud of.
+            if(Time.time-SP.time_at_last_burst>SP.firing_interval-0.1f) SP.projectile_trajectories=ShuffleTrajectiories(num_of_projectiles_spawned); //Now this one, I am proud of.
             boss_bar.maxValue = h.max_HP;
             boss_bar.value = h.HP;
         }
@@ -90,16 +93,25 @@ public class Boss : MonoBehaviour
 
     public void WarpStarter()
     {
-        StartCoroutine(WarpToProjectiles(3));
+        StartCoroutine(WarpToProjectiles(2.98f));
     }
 
     public IEnumerator  WarpToProjectiles(float delay)
     {
         yield return new WaitForSeconds(delay);
-        int randomizer = Random.Range(0, UnstableTemporaries.childCount);
-        transform.position = UnstableTemporaries.GetChild(randomizer).position;
-        Destroy(UnstableTemporaries.GetChild(randomizer).gameObject);
+        float longest_distance = 1;
+        Transform t = UnstableTemporaries.GetChild(0);
 
+        foreach (Transform disc in UnstableTemporaries.GetComponentInChildren<Transform>())
+        {
+            float disct = Vector2.Distance(disc.position, transform.position);
+            if (disct > longest_distance && disct< 20)
+            {
+                longest_distance = disct;
+                t = disc;
+            }
+        }
+        transform.position = t.position;
         for (int i = 0; i < UnstableTemporaries.childCount; i++)
         {
             Destroy(UnstableTemporaries.GetChild(i).gameObject);

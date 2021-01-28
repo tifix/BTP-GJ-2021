@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(MoveOnNavMesh))]
 
 public class TrackObject : MonoBehaviour
 {

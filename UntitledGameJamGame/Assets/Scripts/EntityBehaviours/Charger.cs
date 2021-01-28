@@ -16,6 +16,10 @@ public class Charger : MonoBehaviour
         track = GetComponent<TrackObject>();
     }
 
+    public void EnableDash()
+    {
+        dash.can_dash = true;
+    }
 
     private void FixedUpdate()
     {
