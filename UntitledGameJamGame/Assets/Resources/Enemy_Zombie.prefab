@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5931382731238643560}
   - component: {fileID: 1193185041609628455}
   - component: {fileID: 5221314719559294330}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy_Zombie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd77ac0ad3398264e9fca658090e5e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincible: 0
   HP: 10
   max_HP: 10
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
@@ -194,7 +195,12 @@ MonoBehaviour:
   looking_for: {fileID: 0}
   seing: {fileID: 0}
   detection_radius: 6
+  distance_to_seen: 0
   follow_tracked: 1
+  destination: {x: 0, y: 0}
+  target_spotted:
+    m_PersistentCalls:
+      m_Calls: []
   navmesh_base: {fileID: 5221314719559294330}
 --- !u!114 &5221314719559294330
 MonoBehaviour:

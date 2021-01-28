@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6351844254756774480}
   - component: {fileID: 7502453481539723351}
   - component: {fileID: 6090262641986203117}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy TargetDummy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd77ac0ad3398264e9fca658090e5e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincible: 1
   HP: 9999999
   max_HP: 9999999
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
