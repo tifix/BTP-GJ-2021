@@ -76,7 +76,7 @@ public class MeleeAttack : MonoBehaviour
         float dmg = weapon.attacks[weapon.attackIndex].damage;
         dmg += 1;
         dmg = Mathf.Clamp(dmg, 0, Player.instance.max_dmg);
-        Debug.Log("dmg now " + damage);
+        //Debug.Log("dmg now " + damage);
         weapon.attacks[weapon.attackIndex].damage = dmg;
     }
 

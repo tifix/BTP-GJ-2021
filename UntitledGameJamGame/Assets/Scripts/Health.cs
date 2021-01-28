@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public bool invincible = false;
     public float HP;
     public float max_HP;
     public GameObject hit_effect;
@@ -16,12 +17,14 @@ public class Health : MonoBehaviour
 
     public virtual void TakeDamage(float damage)
     {
+        if (invincible) return;
+
         if(TryGetComponent<HealthRegen>(out HealthRegen HR))
         {
             HR.DamageTaken();
         }
 
-        Debug.Log(gameObject.name + " taken " + damage + " damage");
+        //Debug.Log(gameObject.name + " taken " + damage + " damage");
 
         //Show hit particles
         GameObject hit_splash = Instantiate(hit_effect, transform);

@@ -20,6 +20,7 @@ public class TrackObject : MonoBehaviour
     private Vector2 spawn_position;
     public bool follow_tracked;
     [HideInInspector] public Vector2 destination;
+    [HideInInspector] public UnityEvent target_spotted;
 
     
     public MoveOnNavMesh navmesh_base;
@@ -54,6 +55,7 @@ public class TrackObject : MonoBehaviour
                 if (seing == null) //if looking_for is just spotted, update agent destination
                 {
                     seing = entity.gameObject;
+                    target_spotted.Invoke();
                 }
 
                 distance_to_seen = Vector2.Distance(seing.transform.position, transform.position);

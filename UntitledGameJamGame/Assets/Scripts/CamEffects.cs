@@ -17,6 +17,7 @@ public class CamEffects : MonoBehaviour
 
     private float FOV_base;
 
+    
     public Text defeat_text;
     public Text win_text;
 
@@ -94,7 +95,7 @@ public class CamEffects : MonoBehaviour
 
         }[Random.Range(0, 16)];
         anim.SetTrigger("Defeat");
-        StartCoroutine(Utils.DelayedReturnToMenu());
+        StartCoroutine(Utils.DelayedReturnToMenu(6));
     }
 
     public void Victory()
@@ -110,6 +111,7 @@ public class CamEffects : MonoBehaviour
             "You get one awesome token!"
         }[Random.Range(0, 7)];
         anim.SetTrigger("Victory");
+        StartCoroutine(Utils.DelayedReturnToMenu(15));
     }
 
     #endregion

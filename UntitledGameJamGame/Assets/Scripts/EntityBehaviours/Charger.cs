@@ -14,28 +14,11 @@ public class Charger : MonoBehaviour
     {
         dash = GetComponent<Dash>();
         track = GetComponent<TrackObject>();
-
-        //StartCoroutine(ContinousDashing());
     }
 
-    // Update is called once per frame
-    /*
-    IEnumerator ContinousDashing()
-    {
-        yield return null;
-
-        while (true)
-        {
-            
-            yield return new WaitForFixedUpdate();
-
-        }
-
-    }
-    */
 
     private void FixedUpdate()
     {
-        if (dash.can_dash) StartCoroutine(dash.Woooosh(track.destination, false));
+        if (dash.can_dash &&track.seing!=null) StartCoroutine(dash.Woooosh(track.destination, false));
     }
 }

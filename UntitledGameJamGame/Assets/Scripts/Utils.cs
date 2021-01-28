@@ -27,9 +27,9 @@ public class Utils : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public static IEnumerator DelayedReturnToMenu()
+    public static IEnumerator DelayedReturnToMenu(float delay)
     {
-        yield return new WaitForSecondsRealtime(6);
+        yield return new WaitForSecondsRealtime(delay);
         ReturnToMenu();
     }
 

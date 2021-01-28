@@ -10,8 +10,9 @@ public class Player : MonoBehaviour
     public float max_dmg=10;
     public Slider healthbar;
     public Text combo_counter;
-    public WeaponCombo wc;    
+    public WeaponCombo wc;
 
+    public Transform WarpPoint;
     public float timeSinceLastAttack, timeOfLastAttack;
     private void Awake()
     {
@@ -29,6 +30,8 @@ public class Player : MonoBehaviour
     {
         //if (Input.GetKeyDown(KeyCode.Space)) Time.timeScale = 0.2f;
         //if (Input.GetKeyUp(KeyCode.Space)) Time.timeScale = 1;
+
+        if (Input.GetKeyDown(KeyCode.Space)) transform.position= WarpPoint.position;
 
         UpdateHealthBar();
         timeSinceLastAttack = Time.time - timeOfLastAttack;
