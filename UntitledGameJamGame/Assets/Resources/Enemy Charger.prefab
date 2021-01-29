@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 3914396775975628546}
   - component: {fileID: -237631894708273703}
   - component: {fileID: 3426519582309129232}
+  - component: {fileID: -6316315501119385454}
   m_Layer: 9
   m_Name: Enemy Charger
   m_TagString: Enemy
@@ -80,10 +81,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: f0bfd5d22a6ee624a9e56820a57ae8e7, type: 3}
-  m_Color: {r: 0.028301895, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b3d3a420cb19feb4caab8e392e6a5e4c, type: 3}
+  m_Color: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
@@ -125,9 +126,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.004}
+  m_Offset: {x: -0.000000044703484, y: -0.01051718}
   serializedVersion: 2
-  m_Radius: 0.105
+  m_Radius: 0.13106865
 --- !u!195 &9090354434743885454
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -245,5 +246,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 123e3c2409282cc439e44ae56478a87d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6316315501119385454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040048280536180506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f45d7e610238b44a77ae90666ac39c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -34,7 +34,7 @@ public class MeleeAttack : MonoBehaviour
         if (TryGetComponent<SpriteRenderer>(out SpriteRenderer SR))
         {
             if (is_crit == true) SR.color = Color.blue;
-            else SR.color = ChangeColourByDamage(damage);      //Tint the attack for combo attacks
+            //else SR.color = ChangeColourByDamage(damage);      //Tint the attack for combo attacks
         }
 
         Invoke("DestroyGameObject", maxDuration);

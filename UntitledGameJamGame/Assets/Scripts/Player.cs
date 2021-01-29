@@ -31,7 +31,7 @@ public class Player : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.Space)) Time.timeScale = 0.2f;
         //if (Input.GetKeyUp(KeyCode.Space)) Time.timeScale = 1;
 
-        if (Input.GetKeyDown(KeyCode.Space)) transform.position= WarpPoint.position;
+        //if (Input.GetKeyDown(KeyCode.Space)) transform.position= WarpPoint.position;
 
         UpdateHealthBar();
         timeSinceLastAttack = Time.time - timeOfLastAttack;

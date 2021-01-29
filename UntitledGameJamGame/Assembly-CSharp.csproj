@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\EntityBehaviours\Boss.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\AudioHandler.cs" />
+    <Compile Include="Assets\Scripts\EntityBehaviours\RotateToTracked.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

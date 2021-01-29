@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 3351225201057995692}
   - component: {fileID: 9061035717396707941}
   - component: {fileID: 2040048279892050389}
+  - component: {fileID: 3848079156008727376}
   m_Layer: 9
   m_Name: Enemy Bouncer
   m_TagString: Enemy
@@ -81,10 +82,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: f0bfd5d22a6ee624a9e56820a57ae8e7, type: 3}
-  m_Color: {r: 0.6698113, g: 0.2172818, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b3d3a420cb19feb4caab8e392e6a5e4c, type: 3}
+  m_Color: {r: 0.9622642, g: 0.33768436, b: 0.23239593, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
@@ -105,13 +106,13 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.15
+  m_LinearDrag: 0.1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &1095445178070598240
 CircleCollider2D:
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contact_damage: 2
-  knockback_amount: 3
+  knockback_amount: 1.5
   damage_props: 1
   damage_friendly: 0
 --- !u!114 &9098923282962842469
@@ -180,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invincible: 0
-  HP: 10
+  HP: 20
   max_HP: 10
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
   hit_sounds: []
@@ -200,7 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   looking_for: {fileID: 0}
   seing: {fileID: 0}
-  detection_radius: 9
+  detection_radius: 5
   distance_to_seen: 0
   follow_tracked: 0
   destination: {x: 0, y: 0}
@@ -233,8 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78c0f6f5a2c4fe64da050554d6f5f0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dash_distance: 25
-  dash_cooldown: 5
+  dash_distance: 9
+  dash_cooldown: 7
   can_dash: 1
   dash_particles: {fileID: 2921864499738778077, guid: 28064062eb23de24d8c8f4e985e5e6d7, type: 3}
 --- !u!114 &9061035717396707941
@@ -261,4 +262,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61233c10bcb27a44a8e69bd2929f3d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity_retained: 0.9
+  velocity_retained: 9
+--- !u!114 &3848079156008727376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5655825723789361519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f45d7e610238b44a77ae90666ac39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

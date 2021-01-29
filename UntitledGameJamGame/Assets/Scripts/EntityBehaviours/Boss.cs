@@ -49,7 +49,7 @@ public class Boss : MonoBehaviour
             {
                 if (boss != this) all_bosses_defeated = true;
             }
-            if (all_bosses_defeated) CamEffects.instance.Victory();
+            if (all_bosses_defeated) { CamEffects.instance.Victory(); Player.instance.gameObject.GetComponent<Health>().invincible = true; }
         }
     }
 
