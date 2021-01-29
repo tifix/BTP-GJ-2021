@@ -7,12 +7,13 @@ public class SpawnProjectiles : MonoBehaviour
 {
     public List<Ray2D> projectile_trajectories = new List<Ray2D>();
     public GameObject projectile_prefab;
+    public GameObject attack_telegraph;
     public float firing_interval = 5;
     public float time_at_last_burst;
     private float init_accelaration=4;
     public float telegraph_length = 2;
     public UnityEvent bullet_fired;
-    private bool fire_from_transpos;
+    private bool fire_from_transpos=true;
 
     void Start()
     {
@@ -22,7 +23,17 @@ public class SpawnProjectiles : MonoBehaviour
     // Update is called once per frame
     private void Telegraph(Ray2D trajectory)
     {
-        if (fire_from_transpos) trajectory = new Ray2D(transform.position, trajectory.direction); 
+        if (fire_from_transpos) trajectory = new Ray2D(transform.position, trajectory.direction);
+        GameObject telegraph = Instantiate(attack_telegraph, trajectory.origin, Quaternion.FromToRotation(Vector3.forward,(Vector3)trajectory.direction));
+        Debug.DrawRay(trajectory.origin,trajectory.direction,Color.red, telegraph_length);
+
+        //Increase the duration to telegraph length
+        ParticleSystem.MainModule main = telegraph.GetComponent<ParticleSystem>().main;
+        main.duration = telegraph_length;
+
+        //rotate and destroy
+       // telegraph.transform.up = trajectory.direction;
+        Destroy(telegraph, telegraph_length);
     }
     public void Fire(Ray2D trajectory)
     {
@@ -35,7 +46,7 @@ public class SpawnProjectiles : MonoBehaviour
 
         bullet.transform.SetParent(GetComponent<Boss>().UnstableTemporaries);
         bullet.GetComponent<Rigidbody2D>().AddForce(trajectory.direction* init_accelaration, ForceMode2D.Impulse);
-        Destroy(bullet, 3);
+        Destroy(bullet, firing_interval);
         
     }
 

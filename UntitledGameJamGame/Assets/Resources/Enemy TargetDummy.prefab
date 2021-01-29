@@ -122,6 +122,8 @@ MonoBehaviour:
   HP: 9999999
   max_HP: 9999999
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
+  hit_sounds: []
+  death_sounds: []
 --- !u!61 &6090262641986203117
 BoxCollider2D:
   m_ObjectHideFlags: 0

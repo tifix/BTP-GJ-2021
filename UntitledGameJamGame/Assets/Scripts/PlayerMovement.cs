@@ -49,7 +49,11 @@ public class PlayerMovement : MonoBehaviour
         RB.AddForce(Vector2.right * hor);
         RB.AddForce(Vector2.up * ver);
 
-        if (Input.GetMouseButtonDown(1)) StartCoroutine(dash.Woooosh(Camera.main.ScreenToWorldPoint(Input.mousePosition), true));
+        if (Input.GetMouseButtonDown(1))
+        {
+            StartCoroutine(dash.Woooosh(Camera.main.ScreenToWorldPoint(Input.mousePosition), true));
+            
+        } 
     }
 
 

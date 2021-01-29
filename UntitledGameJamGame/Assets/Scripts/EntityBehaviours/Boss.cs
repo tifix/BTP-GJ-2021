@@ -93,7 +93,7 @@ public class Boss : MonoBehaviour
 
     public void WarpStarter()
     {
-        StartCoroutine(WarpToProjectiles(2.98f));
+        StartCoroutine(WarpToProjectiles(SP.firing_interval-0.01f));    //Warp once projectiles die
     }
 
     public IEnumerator  WarpToProjectiles(float delay)

@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aadee12635e94564195ec0fd869b92f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_crit: 0
+  damage: 2
   weapon: {fileID: 0}
   combo: {fileID: 0}
   sprite: {fileID: 21300000, guid: f0400e7acfd5fb34f9ad8f1234b5d760, type: 3}
@@ -53,7 +55,11 @@ MonoBehaviour:
   pure_attack_duration: 0.1
   minAttackInterval: 0.35
   maxDuration: 1.2
-  damage: 2
+  hit_landed_sounds:
+  - {fileID: 8300000, guid: d1f7e933b4c29af4eb0e392f491f4bd4, type: 3}
+  - {fileID: 8300000, guid: 7164fe9b5251d2b47aef993ee8c40aab, type: 3}
+  - {fileID: 8300000, guid: 117b31e315edb764cb42d9416b074558, type: 3}
+  crit_landed_sound: {fileID: 0}
   minTimingInterval: 0.9
   maxTimingInterval: 1.1
 --- !u!60 &8272119948101218128

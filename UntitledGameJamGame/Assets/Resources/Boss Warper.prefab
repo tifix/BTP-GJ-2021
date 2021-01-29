@@ -35,7 +35,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2833216386269151238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.75, y: 24.42, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -148,8 +148,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005043149, y: 0}
-  m_Size: {x: 0.46991372, y: 0.75}
+  m_Offset: {x: -0.0033639073, y: -0.005036652}
+  m_Size: {x: 0.6411977, y: 0.79365075}
   m_Direction: 0
 --- !u!70 &1542196684800613292
 CapsuleCollider2D:
@@ -164,8 +164,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013447478, y: 0.2349577}
-  m_Size: {x: 0.9583626, y: 0.22689494}
+  m_Offset: {x: 0.01008898, y: 0.21649009}
+  m_Size: {x: 0.9952978, y: 0.08583753}
   m_Direction: 1
 --- !u!114 &4988092154639071633
 MonoBehaviour:
@@ -199,6 +199,9 @@ MonoBehaviour:
   HP: 100
   max_HP: 100
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
+  hit_sounds:
+  - {fileID: 0}
+  death_sounds: []
 --- !u!114 &6176203223330639427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile_prefab: {fileID: 101568141926870450, guid: 9f9eb10e2f0a343469c5911408d2d2dd, type: 3}
+  attack_telegraph: {fileID: 6736484159816707211, guid: 37b2a3a234ad42048bcaecbe2c0cda05, type: 3}
   firing_interval: 3
   time_at_last_burst: 0
   telegraph_length: 0

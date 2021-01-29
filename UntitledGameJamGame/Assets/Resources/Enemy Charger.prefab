@@ -182,6 +182,8 @@ MonoBehaviour:
   HP: 10
   max_HP: 10
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
+  hit_sounds: []
+  death_sounds: []
 --- !u!114 &7973735613614270815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +234,7 @@ MonoBehaviour:
   dash_distance: 25
   dash_cooldown: 3
   can_dash: 1
+  dash_particles: {fileID: 2921864499738778077, guid: 28064062eb23de24d8c8f4e985e5e6d7, type: 3}
 --- !u!114 &3426519582309129232
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -180,6 +180,8 @@ MonoBehaviour:
   HP: 10
   max_HP: 10
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
+  hit_sounds: []
+  death_sounds: []
 --- !u!114 &1193185041609628455
 MonoBehaviour:
   m_ObjectHideFlags: 0

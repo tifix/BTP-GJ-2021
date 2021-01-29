@@ -5,17 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 public class HealthRegen : MonoBehaviour
 {
-    [Header("out of combat, passive healing parameters")]
+    [Header("current timer until out-of-combat healing starts")]
+    public float time_remaining;
     public bool out_of_combat = false;
+
+    [Header("out of combat, passive healing parameters")]
     public float passive_heal_interval=0.5f;
     public float passive_heal_amount = 0.5f;
     public float time_to_start_healing = 5;
-
-    [Header("current timer until out-of-combat healing starts")]
-    public float time_remaining;
-
-    public GameObject hit_effect;
-
+    [Space]
     public Health h;
 
     public void Start() => h = GetComponent<Health>();
@@ -43,13 +41,16 @@ public class HealthRegen : MonoBehaviour
 
 
     //Heals the player in set intervals, until health is maxed, or player takes a hit
-    public IEnumerator PassiveHeal()
+    public IEnumerator PassiveHeal(float init_time)
     {
         //heal the player in intervals untill his health is maxed out
         while (h.HP<h.max_HP)
         {
             yield return new WaitForSeconds(passive_heal_interval);
             h.Heal(passive_heal_amount);
+            if (Time.time - init_time > 2) h.Heal(passive_heal_amount/2);
+            if (Time.time - init_time > 4) h.Heal(passive_heal_amount/2);
+            if (Time.time - init_time > 6) h.Heal(passive_heal_amount);
         }
     }
 
@@ -66,7 +67,7 @@ public class HealthRegen : MonoBehaviour
 
         //once the timer reaches 0, start healing
         out_of_combat = true;
-        StartCoroutine(PassiveHeal());
+        StartCoroutine(PassiveHeal(Time.time));
     }
 
 }

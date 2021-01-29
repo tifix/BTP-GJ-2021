@@ -694,7 +694,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "LMB to attack         RMB to dash\n\nKill enemies \nbefore they kill you.
-    \n\nFind the boss room \nand kill the boss to win!\n\nGood luck!"
+    \n\nIf you can avoid taking damage, \nyou will slowly heal.\n\nFind the boss
+    room \nand kill the boss to win!\n\nGood luck!"
 --- !u!222 &898196416
 CanvasRenderer:
   m_ObjectHideFlags: 0

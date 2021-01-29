@@ -5,21 +5,22 @@ using UnityEngine;
 
 public class MeleeAttack : MonoBehaviour
 {
-    public MeleeWeapon weapon;
-    public WeaponCombo combo;
+    public bool is_crit = false;
+    public float damage;
+
+    [HideInInspector] public MeleeWeapon weapon;
+    [HideInInspector] public WeaponCombo combo;
     public Sprite sprite;
     public PolygonCollider2D hitbox;
-
     public Vector3 size= Vector3.one;
-    public bool is_crit=false;
 
-    //time until can attack again
     public float pure_attack_duration;//time after which the collider disappears - attack is very short, unlike the combo intervals
-    //time after the attack gameobject is destroyed - combo brea
-
-    public float minAttackInterval;
-    public float maxDuration = 4f;
-    public float damage;
+    public float minAttackInterval; //time until can attack again
+    public float maxDuration = 4f;  //time after the attack gameobject is destroyed - combo brea
+   
+    [Header("Sounds")]
+    public List<AudioClip> hit_landed_sounds = new List<AudioClip>();
+    public AudioClip crit_landed_sound;
 
     [Tooltip("combo timing margins - smaller brackets for min attack, max dur")]
     public float minTimingInterval, maxTimingInterval;
@@ -44,6 +45,8 @@ public class MeleeAttack : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out Health health) && collision.gameObject != Player.instance.gameObject)
         {
+            if (is_crit) AudioHandler.PlayEffect(crit_landed_sound);
+            else AudioHandler.PlayRandomEffect(hit_landed_sounds);
             health.TakeDamage(damage);
             combo.HitLanded();
         }

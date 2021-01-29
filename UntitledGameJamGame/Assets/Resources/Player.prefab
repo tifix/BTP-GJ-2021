@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 8711534076369838437}
-  - component: {fileID: 519420029}
   - component: {fileID: 8063189368186313675}
   m_Layer: 0
   m_Name: Main Camera
@@ -128,14 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defeat_text: {fileID: 1831026246}
   win_text: {fileID: 1354441014}
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!95 &8063189368186313675
 Animator:
   serializedVersion: 3
@@ -1273,6 +1264,7 @@ MonoBehaviour:
   dash_distance: 15
   dash_cooldown: 1
   can_dash: 1
+  dash_particles: {fileID: 4333641101466286700, guid: 86aeb784235072a4ab7be3e183524cb5, type: 3}
 --- !u!114 &9115322226277321613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1289,6 +1281,8 @@ MonoBehaviour:
   HP: 20
   max_HP: 20
   hit_effect: {fileID: 5639389056762168633, guid: ddc047765814cf44fa7f607f1281bb8a, type: 3}
+  hit_sounds: []
+  death_sounds: []
 --- !u!114 &6150030210208391370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,12 +1295,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c956da24acecf514996d268a99a7678b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  out_of_combat: 0
-  passive_heal_interval: 1
-  passive_heal_amount: 0.5
-  time_to_start_healing: 7
   time_remaining: 4
-  hit_effect: {fileID: 5639389056762168633, guid: ddc047765814cf44fa7f607f1281bb8a, type: 3}
+  out_of_combat: 0
+  passive_heal_interval: 0.25
+  passive_heal_amount: 0.125
+  time_to_start_healing: 5
   h: {fileID: 9115322226277321613}
 --- !u!114 &1615802188
 MonoBehaviour:
@@ -1325,6 +1318,7 @@ MonoBehaviour:
   healthbar: {fileID: 1868690169}
   combo_counter: {fileID: 7182387702922061735}
   wc: {fileID: 0}
+  WarpPoint: {fileID: 0}
   timeSinceLastAttack: 0
   timeOfLastAttack: 0
 --- !u!1 &6283644133074199705
@@ -1856,16 +1850,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a203ba0e2fd49e46b589d03cb135544, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_crit: 0
+  damage: 0
   weapon: {fileID: 0}
   combo: {fileID: 0}
   sprite: {fileID: 0}
   hitbox: {fileID: 0}
   size: {x: 1, y: 1, z: 1}
-  is_crit: 0
   pure_attack_duration: 0
   minAttackInterval: 0
   maxDuration: 4
-  damage: 0
+  hit_landed_sounds: []
+  crit_landed_sound: {fileID: 0}
   minTimingInterval: 0
   maxTimingInterval: 0
 --- !u!1 &8772603498263009498

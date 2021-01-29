@@ -164,6 +164,9 @@ MonoBehaviour:
   HP: 1
   max_HP: 1
   hit_effect: {fileID: 1214670400166887432, guid: 02d98100612fed948aa46ea8c9147272, type: 3}
+  hit_sounds: []
+  death_sounds:
+  - {fileID: 8300000, guid: bfd67b9548a55f14a8ac648218ad1e75, type: 3}
 --- !u!114 &8336618343741633233
 MonoBehaviour:
   m_ObjectHideFlags: 0

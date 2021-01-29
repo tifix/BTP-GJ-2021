@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101568141926870450}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.58, y: 25.22, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -143,6 +143,8 @@ MonoBehaviour:
   HP: 9999
   max_HP: 10
   hit_effect: {fileID: 6715394143003332876, guid: c7e00230062b56a46841ea423c3d78ce, type: 3}
+  hit_sounds: []
+  death_sounds: []
 --- !u!114 &8326879728695862263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +182,7 @@ MonoBehaviour:
   dash_distance: 6
   dash_cooldown: 2
   can_dash: 0
+  dash_particles: {fileID: 2921864499738778077, guid: 28064062eb23de24d8c8f4e985e5e6d7, type: 3}
 --- !u!114 &3650752241498445496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61233c10bcb27a44a8e69bd2929f3d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity_retained: 4
+  velocity_retained: 2
 --- !u!70 &5698549038215294175
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
